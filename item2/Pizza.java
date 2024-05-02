@@ -4,9 +4,6 @@ import java.util.EnumSet;
 import java.util.Objects;
 import java.util.Set;
 
-/*
- * Item2: Consider a builder when faced with many constuctor parameters
- */
 public abstract class Pizza {
     public enum Topping{
         HAM, MUSHROOM, ONION, PEPPER, SAUSAGE

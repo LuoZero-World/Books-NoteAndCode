@@ -7,6 +7,10 @@ public class NyPizza extends Pizza{
     public enum Size {SMALL, MEDIUM, LARGE}
     private final Size size;
 
+    public String getSize(){
+        return size.name();
+    }
+
      public static class Builder extends Pizza.Builder<Builder> {
         private final Size size;
 
