@@ -1,0 +1,4 @@
+Observer模式目的在于将状态发生变化的类和发送状态变化通知的类分开实现
+Observer角色并非主动观察，而是被动接受Subject角色的通知，故而也被称为**Publish-Subscribe**模式
+
+就“发送状态变化通知”而言，Mediator模式和Observer模式是类似的，但两种模式中通知的目的和视角不同：前者是为了对Colleague角色仲裁；后者是为了使Subject角色和Observer角色同步
