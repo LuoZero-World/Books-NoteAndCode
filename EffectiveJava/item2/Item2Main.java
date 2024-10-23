@@ -1,7 +1,7 @@
-package item2;
+package EffectiveJava.item2;
 
-import item2.NyPizza.Size;
-import item2.Pizza.Topping;
+import EffectiveJava.item2.NyPizza.Size;
+import EffectiveJava.item2.Pizza.Topping;
 
 /*
  * Item2: Consider a builder when faced with many constuctor parameters
