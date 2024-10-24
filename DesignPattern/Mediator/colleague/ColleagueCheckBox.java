@@ -7,8 +7,6 @@ import java.awt.event.ItemListener;
 
 import DesignPattern.Mediator.Mediator;
 
-importDesignPattern. Mediator.Mediator;
-
 //ConcreteColleague
 public class ColleagueCheckBox extends Checkbox implements ItemListener, Colleague{
 
