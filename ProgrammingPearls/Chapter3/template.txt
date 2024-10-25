@@ -1,0 +1,3 @@
+Dear $0,
+    Your email address($1) that was registered in 2024-$2-$3 has expired,
+    Please contact the administrator as soon as possible!
