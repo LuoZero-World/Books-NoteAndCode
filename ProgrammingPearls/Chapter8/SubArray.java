@@ -26,7 +26,7 @@ public class SubArray {
         int start = 0, end = 0;
 
         for (int i = 1; i < n; i++) {
-            int diff = Math.abs(prefixSumsWithIdx[i][1] - prefixSumsWithIdx[i-1][1]);
+            int diff = prefixSumsWithIdx[i][1] - prefixSumsWithIdx[i-1][1];
             if (diff < minDiff) {
                 minDiff = diff;
                 //[start, end]
@@ -40,5 +40,18 @@ public class SubArray {
     }
 
     //求子数组和最接近t 的子数组
-    //前缀和+二分
+    public int[] findClosestToGivenNums(int[] nums, int t) {
+       /*  前缀和+二分
+        *  但此时不能和找接近0的子数组代码一样：直接对前缀和数组进行排序，然后对前缀和数组中每个数k 依次二分查找另一个数k'使得k'-k=t
+        *  原因在于：假设排序后k和k'所对应的位置信息为i、i'
+        *  如果i'>i 那么这个子数组和确实接近t；但若i>i' 那么这个子数组和实际上接近-t
+        */
+
+        /*
+         * 因此二分查找所需的数据结构，既要保持元素有序，也要有【元素所对应位置都在当前被查元素之前】这一【顺序】特性
+         * 不再对前缀和数组排序，使用TreeMap
+         * 遍历前缀和数组，在每一次迭代时将当前元素k存入TreeMap，然后在TreeMap中二分查找 k-t
+         */
+        return new int[]{};
+    }
 }
