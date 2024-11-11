@@ -1,0 +1,10 @@
+如下代码需要用到2n次乘法
+y = a[0], xi = 1
+for i = [1,n]
+    xi = x*xi
+    y = y + a[i]*xi
+
+优化后只需用到n次乘法
+y = a[n], xi = 1
+for i = [n-1, 0]
+    y = x*y + a[i]

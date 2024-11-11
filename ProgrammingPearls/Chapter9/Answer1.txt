@@ -1,0 +1,4 @@
+可以使用一个256元的表来存储每一个字符的信息
+表项通过位来存储信息，通过逻辑与操作来提取：
+#define isupper(c) (bigtable[c] & UPPER)
+#define isalnum(c) (bigtable[c] & (DIGIT|LOWER|UPPER))
