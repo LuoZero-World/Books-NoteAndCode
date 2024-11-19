@@ -2,7 +2,8 @@ package ProgrammingPearls.Chapter11;
 
 /*
  * 在O(n)时间内找到数组中第K小的元素
- * 最坏情况下 排序所用时间为n*(1+1/2+1/4+...+1/(2^k))~O(n), k=logn
+ * 平均情况下 排序所用时间为n*(1+1/2+1/4+...+1/(2^k))~O(n), k=logn
+ * 最坏情况下，考虑升序数组 该算法所用时间为O(n^2)
  */
 public class KthSmallestElement {
     private int[] array;
