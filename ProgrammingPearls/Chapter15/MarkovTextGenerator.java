@@ -55,7 +55,7 @@ public class MarkovTextGenerator {
     }
 
     /*
-     * 根据前K个单词比较两个字符串
+     * 根据前K个单词比较两个非空字符串，p是后缀数组，q是待比较串
      */
     private int wordNCompare(String p, String q) {
         int i = 0, j = 0;
@@ -63,7 +63,7 @@ public class MarkovTextGenerator {
             i++;
             j++;
         }
-        if(j >= q.length()) return 0;
+        if(i >= p.length() || j >= q.length() && p.charAt(i) == ' ') return 0;
         return (i < p.length() ? p.charAt(i) : 0) - (j < q.length() ? q.charAt(j) : 0);
     }
 
@@ -86,7 +86,7 @@ public class MarkovTextGenerator {
             }
 
             // 查找匹配的后缀
-            for (int i = 0; wordNCompare(suffixArray[l+i], phrase) == 0; i++) {
+            for (int i = 0; l+i < nWords && wordNCompare(suffixArray[l+i], phrase) == 0; i++) {
                 //等概率生成 下一个单词
                 if (random.nextInt(i + 1) == 0) {
                     selectedWord = suffixArray[l+i];
