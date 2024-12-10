@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Random;
 
 /*
- * 核心思想是构造后缀数组，然后根据当前K个单词(M_phrase)查找到其在后缀数组中出现的起始位置
+ * 核心思想是构造后缀数组并排序，然后根据当前K个单词(M_phrase)查找到其在后缀数组中出现的起始位置
  * 然后使用取样算法选择一个与这K个单词匹配的后缀串，生成下一个单词
  */
 public class MarkovTextGenerator {
