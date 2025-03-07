@@ -18,7 +18,7 @@ public class CyclicDisplacement {
     public int[] method1(){
         int[] res = Arrays.copyOf(x, N);
         int fin = gcd(D, N);
-        for(int i = 0; i < fin; i++){       //分成gcd(D, N)次来移动
+        for(int i = 0; i < fin; i++){       //分成gcd(D, N)次来移动，具体推导见Answer1.txt
             int t = res[i], j = i;
             while(true){
                 int k = j+D;
